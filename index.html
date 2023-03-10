@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lev3_1: Mehrwertsteuer-Rechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <h2>Mehrwertsteuer-Rechner</h2>
+        <form action="" onsubmit="return false">
+            <div>
+                <h3>Was soll berechnet werden?</h3>
+                <input type="radio" name="radio1" id="add" onchange="text()">
+                <label for="">Mehrwersteuer aufschlagen(Netto zu Brutto)</label>
+                <input type="radio" name="radio1" id="sub" onchange="text()">
+                <label for="">Mehrwersteuer abziehen(Brutto zu Netto)</label>
+            </div>
+            <div>
+                <h3>Mehrwersteuersatz</h3>
+                <input type="radio" name="radio2" id="steuersatz19">
+                <label for="">19%</label>
+                <input type="radio" name="radio2" id="steuersatz7">
+                <label for="">7%</label>
+            </div>
+
+            <div>
+                <h3 id="textMwst"></h3>
+                <input type="number" value="" id="inputnum" required>
+            </div>
+            <input type="button" value="BERECHNEN" onclick="calc()">
+        </form>
+    </section>
+
+    <h4>Ergebnis</h4>
+    <div>
+        <h3>Mehrwertsteuerbetrag</h3>
+        <p id="ergebnismwst"></p>
+    </div>
+    <div>
+        <h3 id="endBetrag"></h3>
+        <p id="ergebnis"></p>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
